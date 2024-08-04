@@ -383,7 +383,7 @@ class Component(Manifest):
                 )
                 return (
                     False,
-                    f"Props missmatch for '{k}': Got '{target.props[k]}' but expected {', '.join(vStrs)}",
+                    f"Props missmatch for '{k}' on component '{self.id}' : Got '{target.props[k]}' but expected {', '.join(vStrs)}",
                 )
 
         return True, ""
