@@ -208,6 +208,7 @@ expose("utils.union", _union)
 expose("utils.concat", lambda *args: "".join(args))
 expose("utils.first", lambda arg: arg[0] if arg else None)
 expose("utils.last", lambda arg: arg[-1] if arg else None)
+expose("shell.env", lambda varname: os.environ.get(varname, ""))
 
 
 class EvalArgs:
