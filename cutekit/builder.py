@@ -395,7 +395,7 @@ def _globalHeaderHook(scope: TargetScope):
         # because this will break #pragma once in some compilers.
         with open(aliasPath, "w") as f:
             f.write("#pragma once\n")
-            f.write(f"#include <{c.id}/{os.path.basename(modPath)}>\n")
+            f.write(f'#include "{Path(modPath).absolute()}"\n')
 
 
 def build(
