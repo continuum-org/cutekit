@@ -744,7 +744,7 @@ def command(shortName: Optional[str], longName: str, description: str = "") -> C
 
         _logger.info(f"Registering command '{'.'.join(path)}'")
         if cmd.populated:
-            raise ValueError(f"Command '{longName}' is already defined")
+            _logger.warn(f"Command '{longName}' is already defined")
 
         cmd.shortName = shortName
         cmd.description = description
